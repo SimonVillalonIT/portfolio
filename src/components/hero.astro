@@ -1,0 +1,24 @@
+---
+import {Image} from "astro:assets"
+import Logo from "../../public/Logo.svg"
+import Dots from "../../public/Dots.svg"
+import Avatar from "../../public/avatar.svg"
+---
+<section class="h-fit pt-8 relative sm:grid sm:grid-cols-5">
+    <div class="sm:col-span-3 sm:grid sm:grid-rows-3">
+        <h1 class="font-semibold text-2xl leading-9">Simon Villalon, <br class="hidden sm:block"><span
+                class="text-primary">Desarrollador <br class="sm:hidden"> Full
+                Stack</span></h1>
+        <p class="text-gray mt-6 text-pretty">Creo experiencias digitales que fusionan tecnología y creatividad en cada
+            proyecto
+        </p>
+        <a href="#contact"
+            class="hidden sm:flex p-3  mt-6 border w-fit h-fit border-primary hover:bg-primary text-xs">Contactame</a>
+    </div>
+    <Image loading="eager" class="absolute bottom-24 sm:top-12 sm:right-80" alt="Logo particle" src={Logo} />
+    <Image loading="eager" class="absolute bottom-12 right-6 sm:bottom-24 sm:right-16 sm:w-16" alt="Dots particle"
+        src={Dots} />
+    <div class="flex justify-center items-center col-span-2 sm:justify-start sm:items-start sm:h-fit">
+        <Image loading="eager" class="z-10 relative sm:w-72 sm:-top-12" alt="avatar" src={Avatar} />
+    </div>
+</section>
