@@ -1,30 +1,35 @@
 ---
-import Header from "../components/header.astro"
-import Hero from "../components/hero.astro"
-import Aside from "../components/aside.astro"
-import Quote from "../components/quote.astro"
+import Header from "../components/header.astro";
+import Hero from "../components/hero.astro";
+import Aside from "../components/aside.astro";
+import Quote from "../components/quote.astro";
+import Projects from "../components/projects.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="logo-sv-white.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-		<title>Portfolio</title>
-        <style>
-            * {
-                font-family: "Fira Code";
-            }
-        </style>
-	</head>
-	<body class="p-6 sm:px-44 md:pt-8 bg-background text-white sm:flex sm:flex-col sm:items-center">
-        <Aside />
-        <Header />
-        <Hero />
-        <Quote />
-    </body>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="logo-sv-white.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet" />
+    <title>Portfolio</title>
+    <style>
+        * {
+            font-family: "Fira Code";
+        }
+    </style>
+</head>
+
+<body class="relative bg-background px-6 text-white sm:flex sm:flex-col sm:items-center sm:px-44">
+    <Aside />
+    <Header />
+    <Hero />
+    <Quote />
+    <Projects />
+</body>
+
 </html>

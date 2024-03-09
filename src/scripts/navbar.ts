@@ -1,6 +1,6 @@
 const openNavbar = document.getElementById("open");
 const closeNavbar = document.getElementById("close");
-const menu = document.getElementById("menu")
+const menu = document.getElementById("menu");
 
 function toggle() {
   openNavbar?.classList.toggle("hidden");

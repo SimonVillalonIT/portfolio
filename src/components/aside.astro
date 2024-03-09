@@ -1,20 +1,21 @@
 ---
-import {Image} from "astro:assets"
-import GithubIcon from "../../public/Github.svg"
-import TwitterIcon from "../../public/Twitter.svg"
-import LinkedinIcon from "../../public/Linkedin.svg"
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 ---
 
-<aside class="hidden fixed left-6 top-0 sm:flex flex-col items-center h-full">
-    <span class="w-[1px] h-48 bg-gray"></span>
-    <a class="w-8 mt-2" target="_blank" href="https://www.linkedin.com/in/simon-villalon">
-        <Image loading="eager" src={LinkedinIcon} alt="linkedin icon LinkedinIcon"></Image>
+<aside class="fixed z-[110] left-6 top-0 hidden h-full flex-col items-center sm:flex">
+    <span class="h-48 w-[1px] bg-gray"></span>
+    <a target="_blank" href="https://www.linkedin.com/in/simon-villalon"
+        alt="Linkedin linkedin-profile linkedin-simonvillalonit" title="Linkedin page">
+        <Icon class="mt-2 text-3xl" name="Linkedin" />
     </a>
-    <a class="w-8 mt-2"  target="_blank" href="https://github.com/SimonVillalonIT">
-        <Image loading="eager" src={GithubIcon} alt="Github icon GithubIcon"></Image>
+    <a class="mt-2 text-3xl" target="_blank" href="https://github.com/SimonVillalonIT"
+        alt="Github github-profile github-simonvillalonit" title="Github page">
+        <Icon name="Github" />
     </a>
-    <a class="w-8 mt-2 mb-2" target="_blank" href="https://twitter.com/simonvillalon4">
-        <Image loading="eager" src={TwitterIcon} alt="Twitter icon TwitterIcon"></Image>
+    <a class="mb-2 mt-2 text-3xl" target="_blank" href="https://twitter.com/simonvillalon4"
+        alt="Twitter twitter-profile twitter-simonvillalonit" title="Linkedin page">
+        <Icon name="Twitter" />
     </a>
-    <span class="w-[1px] h-full bg-gray"></span>
+    <span class="h-full w-[1px] bg-gray"></span>
 </aside>

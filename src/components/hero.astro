@@ -1,24 +1,31 @@
 ---
-import {Image} from "astro:assets"
-import Logo from "../../public/Logo.svg"
-import Dots from "../../public/Dots.svg"
-import Avatar from "../../public/avatar.svg"
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import Button from "./button.astro"
+import Avatar from "../icons/Avatar.svg";
 ---
-<section class="h-fit pt-8 relative sm:grid sm:grid-cols-5">
+
+<section class="relative h-fit pt-8 sm:mt-16 sm:grid sm:grid-cols-5">
     <div class="sm:col-span-3 sm:grid sm:grid-rows-3">
-        <h1 class="font-semibold text-2xl leading-9">Simon Villalon, <br class="hidden sm:block"><span
-                class="text-primary">Desarrollador <br class="sm:hidden"> Full
-                Stack</span></h1>
-        <p class="text-gray mt-6 text-pretty">Creo experiencias digitales que fusionan tecnología y creatividad en cada
+        <h1 class="text-2xl font-semibold leading-9">
+            Simón Villalón, <br class="hidden sm:block" /><span class="text-primary">Desarrollador <br
+                    class="sm:hidden" /> Full Stack</span>
+        </h1>
+        <p class="mt-6 text-pretty text-gray">
+            Creo experiencias digitales que fusionan tecnología y creatividad en cada
             proyecto
         </p>
-        <a href="#contact"
-            class="hidden sm:flex p-3  mt-6 border w-fit h-fit border-primary hover:bg-primary text-xs">Contactame</a>
-    </div>
-    <Image loading="eager" class="absolute bottom-24 sm:top-12 sm:right-80" alt="Logo particle" src={Logo} />
-    <Image loading="eager" class="absolute bottom-12 right-6 sm:bottom-24 sm:right-16 sm:w-16" alt="Dots particle"
-        src={Dots} />
-    <div class="flex justify-center items-center col-span-2 sm:justify-start sm:items-start sm:h-fit">
-        <Image loading="eager" class="z-10 relative sm:w-72 sm:-top-12" alt="avatar" src={Avatar} />
+        <Button text="Contáctame" href="#contact" />
+            </div>
+    <Icon class="z-20 absolute bottom-36 text-8xl sm:right-80 sm:top-12" name="Logo" />
+    <Icon class="absolute bottom-20 right-6 text-6xl sm:bottom-24 sm:right-16" name="Dots" />
+    <div class="z-30 col-span-2 flex flex-col items-center justify-center sm:-ml-36 sm:-mt-6">
+        <Image class="sm:w-72" src={Avatar} alt="Avatar SmAvatar" loading="eager" />
+        <div class="flex items-start border border-gray bg-background p-1 sm:-mt-3">
+            <div class="h-2 w-2 bg-primary"></div>
+            <h5 class="sm:max-w-72 sm:text-sm sm:font-light">
+                Estudiando Tecnicatura Superior en Desarrollo de Software
+            </h5>
+        </div>
     </div>
 </section>

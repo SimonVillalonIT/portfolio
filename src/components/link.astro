@@ -1,29 +1,34 @@
 ---
-const {text, link} = Astro.props
+const { text, link } = Astro.props;
 ---
 
 <style>
-.hover-border {
+  .hover-border {
     position: relative;
     text-decoration: none;
-}
+  }
 
-.hover-border::before {
-    content: '';
+  .hover-border::before {
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: #C778DD; /* Change color as needed */
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-}
+    background-color: #c778dd; /* Change color as needed */
+    transition:
+      width 0.3s ease-in-out,
+      left 0.3s ease-in-out;
+  }
 
-.hover-border:hover::before {
+  .hover-border:hover::before {
     width: 100%;
     left: 0;
-}
+  }
 </style>
 
-
-<a href={link} class="text-4xl border-b border-transparent sm:text-base sm:font-medium hover-border"><span class="text-primary">#</span>{text}</a>
+<a
+  href={link}
+  class="hover-border border-b border-transparent text-4xl sm:text-base sm:font-medium"
+  ><span class="text-primary">#</span>{text}</a
+>

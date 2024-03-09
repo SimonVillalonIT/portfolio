@@ -1,52 +1,45 @@
 ---
-import {Image} from "astro:assets"
-import Link from "../components/link.astro"
-import MenuIcon from "../../public/menu.svg"
-import CloseIcon from "../../public/close.svg"
-import GithubIcon from "../../public/Github.svg"
-import LinkedinIcon from "../../public/Linkedin.svg"
-import TwitterIcon from "../../public/Twitter.svg"
-import Logo from "../../public/logo-sv-white.png"
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import Link from "../components/link.astro";
+import Logo from "../../public/logo-sv-white.png";
 
-const links = [{link: "/", text: "home"},{link: "/projects", text: "projects"},{link: "/about", text: "about"},{link:
-"/contact", text: "contact"}]
+const links = [
+{ link: "/", text: "inicio" },
+{ link: "/projects", text: "projectos" },
+{ link: "/about", text: "sobre mi" },
+{ link: "/contact", text: "contacto" },
+];
 ---
 
 <script src="../scripts/navbar.ts"></script>
-<header class="flex w-full justify-between sm:mb-20">
+<header class="flex bg-background fixed z-50 w-full sm:px-44 md:pt-8 justify-between sm:pb-4">
     <div class="flex items-center">
-        <Image class="w-5 h-5"  src={Logo} alt="logo simon-villalon" />
-        <a class="text-lg font-bold sm:text-base" href="https://github.com/SimonVillalonIT" target="_blank">Simon</a>
+        <Image loading="eager" class="h-5 w-5" src={Logo} alt="logo simon-villalon" />
+        <a class="text-lg font-bold sm:text-base" href="https://github.com/SimonVillalonIT" target="_blank">Simón</a>
     </div>
     <nav class="hidden w-fit sm:flex sm:gap-8">
-        {links.map(l => (
-        <Link {...l} />
-        ))
-        }
+        {links.map((l) =>
+        <Link {...l} />)}
     </nav>
     <div class="flex sm:hidden">
-        <Image loading="eager" id="open" src={MenuIcon} alt="Menu menu-button"
-            class="w-4 h-4 text-gray-800 cursor-pointer" />
-        <Image id="close" src={CloseIcon} alt="Close close-button"
-            class="w-4 h-4 text-gray-800 hidden cursor-pointer" />
+        <Icon id="open" name="menu" class="text-gray-800 h-4 w-4 cursor-pointer" />
+        <Icon id="close" name="close" class="text-gray-800 hidden h-4 w-4 cursor-pointer" />
         <nav id="menu"
-            class="fixed flex top-16 left-0 w-full h-full px-2 pt-4 mt-6 flex-col gap-6 transition-transform translate-x-[100vw] bg-background z-40">
-            {
-            links.map(l => (
-            <Link {...l} />
-            ))
-            }
-            <div class="flex items-center justify-evenly h-full ">
+            class="fixed left-0 top-16 z-40 mt-6 flex h-full w-full translate-x-[100vw] flex-col gap-6 bg-background px-2 pt-4 transition-transform">
+            {links.map((l) =>
+            <Link {...l} />)}
+            <div class="flex h-full items-center justify-evenly">
                 <a target="_blank" href="https://www.linkedin.com/in/simon-villalon">
-                    <Image loading="eager" src={LinkedinIcon} alt="linkedin icon LinkedinIcon"></Image>
+                    <Icon name="Linkedin" />
                 </a>
                 <a target="_blank" href="https://github.com/SimonVillalonIT">
-                    <Image loading="eager" src={GithubIcon} alt="Github icon GithubIcon"></Image>
-                </a>
-                <a target="_blank" href="https://twitter.com/simonvillalon4">
-                    <Image loading="eager" src={TwitterIcon} alt="Twitter icon TwitterIcon"></Image>
+                    <Icon name="Github" />
                 </a>
             </div>
+            <a target="_blank" href="https://twitter.com/simonvillalon4">
+                <Icon name="Twitter" />
+            </a>
         </nav>
     </div>
 </header>

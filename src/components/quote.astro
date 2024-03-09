@@ -1,7 +1,16 @@
-<section class="flex flex-col items-center justify-center w-fit">
-    <fieldset class="border border-gray text-base font-medium h-fit">
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section class="flex w-fit flex-col items-center justify-center sm:mb-32">
+    <Icon class="hidden absolute right-0 text-6xl sm:block" name="Square" />
+    <fieldset class="h-fit border border-gray text-base font-medium">
         <legend class="ml-2 pt-8 text-6xl text-gray">&ldquo;</legend>
-        <h3 class="p-5 -mt-12">El éxito es ir de fracaso en fracaso sin perder el entusiasmo</h3>
+        <h3 class="-mt-12 p-5">
+            El éxito es ir de fracaso en fracaso sin perder el entusiasmo
+        </h3>
     </fieldset>
-    <div class="border-b border-r border-l border-gray p-2 self-end text-sm"><h4>Winston Churchill</h4></div>
+    <div class="self-end border-b border-l border-r border-gray p-2 text-sm">
+        <h4>Winston Churchill</h4>
+    </div>
 </section>
