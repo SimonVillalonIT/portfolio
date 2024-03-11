@@ -1,0 +1,8 @@
+---
+const { title, items } = Astro.props;
+---
+
+<article class="border border-gray">
+  <h4 class="border-b border-gray p-2 text-base font-semibold">{title}</h4>
+  <div class="p-1 text-base font-medium text-gray">{items.join(" ")}</div>
+</article>

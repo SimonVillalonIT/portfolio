@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/section-layout.astro";
+import photo from "../../public/yo.jpg";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="sobre-mi" className="mt-12 lg:mt-24">
+  <div
+    class="relative flex flex-col items-center text-base font-medium leading-6 text-gray lg:flex-row-reverse lg:justify-between"
+  >
+    <Icon name="Rectangle" class="absolute -top-48 right-4 text-8xl" />
+    <Icon name="Dots" class="absolute top-12 hidden text-6xl lg:block" />
+    <Icon name="Logo" class="absolute -bottom-3 hidden text-9xl lg:block" />
+    <div class="flex h-full w-full justify-center">
+      <Image
+        loading="eager"
+        class="max-w-80 border border-primary object-cover p-1"
+        src={photo}
+        alt="SimonVillalon"
+      />
+    </div>
+    <div class="lg:max-w-prose">
+      <p class="my-6">¡Hola, soy Simón!</p>
+      <p class="mb-6">
+        Como desarrollador Full-Stack Junior, me especializo en HTML, CSS y
+        JavaScript para la creación de sitios web dinámicos y atractivos. Tengo
+        experiencia en el desarrollo tanto del lado del cliente como del
+        servidor, utilizando tecnologías como React y Node.js para construir
+        aplicaciones web y APIs robustas.
+      </p>
+      <p>
+        Apasionado por el aprendizaje constante, estoy en busca de oportunidades
+        de nivel de entrada que me permitan seguir creciendo profesionalmente y
+        aplicar mis habilidades para crear soluciones innovadoras. Mi objetivo
+        es contribuir al desarrollo de proyectos emocionantes y desafiantes que
+        impulsen el mundo digital hacia adelante.
+      </p>
+    </div>
+  </div>
+</Layout>

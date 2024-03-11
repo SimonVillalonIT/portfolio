@@ -1,0 +1,33 @@
+---
+import Header from "../components/header.astro";
+import Aside from "../components/aside.astro";
+import Footer from "../components/footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="logo-sv-white.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio</title>
+    <style>
+      * {
+        font-family: "Fira Code";
+      }
+    </style>
+  </head>
+
+  <body>
+    <Aside />
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

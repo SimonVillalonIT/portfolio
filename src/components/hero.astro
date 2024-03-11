@@ -1,31 +1,47 @@
 ---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import Button from "./button.astro"
+import Button from "./button.astro";
 import Avatar from "../icons/Avatar.svg";
 ---
 
-<section class="relative h-fit pt-8 sm:mt-16 sm:grid sm:grid-cols-5">
-    <div class="sm:col-span-3 sm:grid sm:grid-rows-3">
-        <h1 class="text-2xl font-semibold leading-9">
-            Simón Villalón, <br class="hidden sm:block" /><span class="text-primary">Desarrollador <br
-                    class="sm:hidden" /> Full Stack</span>
-        </h1>
-        <p class="mt-6 text-pretty text-gray">
-            Creo experiencias digitales que fusionan tecnología y creatividad en cada
-            proyecto
-        </p>
-        <Button text="Contáctame" href="#contact" />
-            </div>
-    <Icon class="z-20 absolute bottom-36 text-8xl sm:right-80 sm:top-12" name="Logo" />
-    <Icon class="absolute bottom-20 right-6 text-6xl sm:bottom-24 sm:right-16" name="Dots" />
-    <div class="z-30 col-span-2 flex flex-col items-center justify-center sm:-ml-36 sm:-mt-6">
-        <Image class="sm:w-72" src={Avatar} alt="Avatar SmAvatar" loading="eager" />
-        <div class="flex items-start border border-gray bg-background p-1 sm:-mt-3">
-            <div class="h-2 w-2 bg-primary"></div>
-            <h5 class="sm:max-w-72 sm:text-sm sm:font-light">
-                Estudiando Tecnicatura Superior en Desarrollo de Software
-            </h5>
-        </div>
+<section class="relative h-fit pt-16 lg:mt-32 lg:grid lg:grid-cols-5 lg:py-8">
+  <div class="lg:col-span-3 lg:grid lg:grid-rows-3">
+    <h1 class="text-2xl font-semibold leading-9">
+      Simón Villalón, <br class="hidden lg:block" /><span class="text-primary"
+        >Desarrollador <br class="lg:hidden" /> Full Stack</span
+      >
+    </h1>
+    <p class="mt-6 text-pretty text-gray">
+      Creo experiencias digitales que fusionan tecnología y creatividad en cada
+      proyecto
+    </p>
+    <Button text="Contáctame" href="#contact" size="xl" />
+  </div>
+  <Icon
+    class="absolute bottom-36 z-0 text-9xl lg:right-96 lg:top-12"
+    name="Logo"
+  />
+  <Icon
+    class="absolute bottom-20 right-6 z-20 text-5xl sm:text-8xl lg:bottom-24 lg:right-16"
+    name="Dots"
+  />
+  <div
+    class="col-span-2 flex flex-col items-center justify-center lg:-ml-36 lg:-mt-6"
+  >
+    <Image
+      class="z-10 lg:w-72"
+      src={Avatar}
+      alt="Avatar SmAvatar"
+      loading="eager"
+    />
+    <div
+      class="z-20 flex items-start border border-gray bg-background p-1 lg:-mt-3"
+    >
+      <div class="h-2 w-2 bg-primary"></div>
+      <h5 class="lg:max-w-72 lg:text-lg lg:font-light">
+        Estudiando Tecnicatura Superior en Desarrollo de Software
+      </h5>
     </div>
+  </div>
 </section>

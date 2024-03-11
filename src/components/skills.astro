@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/section-layout.astro";
+import skills from "../../data/skills.ts";
+import Box from "./box.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="habilidades" className="mt-12 lg:mt-24">
+  <div class="flex py-4">
+    <div class="relative hidden w-1/2 sm:flex">
+      <Icon name="Dots" class="text-7xl" />
+      <Icon name="Dots" class="absolute -bottom-12 right-1/2 text-6xl" />
+      <Icon name="Rectangle" class="absolute -top-8 right-12 text-8xl" />
+      <Icon name="Rectangle" class="absolute -bottom-8 right-3 text-7xl" />
+      <Icon name="Logo" class="absolute bottom-12 left-12 text-8xl" />
+    </div>
+    <div class="grid grid-cols-2 gap-5 lg:grid-cols-3">
+      {
+        Object.entries(skills).map(([key, value]) => (
+          <Box title={key} items={value} />
+        ))
+      }
+    </div>
+  </div>
+</Layout>

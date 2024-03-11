@@ -1,14 +1,21 @@
 ---
-import Layout from "./section-layout.astro"
-import ProjectCard from "./project.astro"
-import {Icon} from "astro-icon/components"
-import projects from "../../data/projects.ts"
+import Layout from "../layouts/section-layout.astro";
+import ProjectCard from "./project.astro";
+import { Icon } from "astro-icon/components";
+import projects from "../../data/projects.ts";
 ---
-<Layout title="projectos">
-    <Icon name="Dots" class="absolute left-20 text-6xl" />
-    <Icon name="Logo" class="absolute right-16 bottom-20 text-7xl" />
-    <div class="grid grid-cols-3 gap-12">
-        {projects.map(p =>
-        <ProjectCard {...p} />)}
-    </div>
+
+<Layout title="projectos" className="relative">
+  <Icon
+    name="Rectangle"
+    class="absolute -left-24 top-2 z-10 hidden text-7xl lg:block"
+  />
+  <Icon
+    name="Logo"
+    class="absolute -bottom-12 -right-24 hidden text-8xl lg:block"
+  />
+  <Icon name="Dots" class="absolute -right-12 top-0 hidden text-8xl lg:block" />
+  <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+    {projects.map((p) => <ProjectCard {...p} />)}
+  </div>
 </Layout>

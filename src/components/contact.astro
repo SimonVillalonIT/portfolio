@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/section-layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="contáctame" className="mt-24 pb-24">
+  <div class="relative flex flex-col justify-between lg:flex-row">
+    <Icon name="Dots" class="absolute -left-12 hidden text-7xl lg:block" />
+    <Icon name="Rectangle" class="absolute left-1/2 hidden text-7xl lg:block" />
+    <Icon
+      name="Logo"
+      class="absolute left-[40%] top-28 hidden text-8xl lg:block"
+    />
+    <p class="z-20 max-w-96 bg-background text-base font-medium text-gray">
+      Estoy interesado en oportunidades laborales, pasantías y trabajos
+      freelance. Sin embargo, si tienes otras solicitudes o preguntas, no dudes
+      en contactarme.
+    </p>
+    <div class="mt-4 flex flex-col border border-gray p-2 lg:mt-0">
+      <h5 class="text-base font-semibold">Contáctame aquí</h5>
+      <a
+        href="mailto:simonvillalon9@gmail.com?subject=Portfolio&body=Hello%20there,"
+        target="_blank"
+        class="flex items-center justify-between lg:mr-24 lg:mt-7"
+      >
+        <Icon name="Email" class="text-4xl" />
+        <p class="text-gray">simonvillalon9@gmail.com</p>
+      </a>
+    </div>
+  </div>
+</Layout>

@@ -3,19 +3,32 @@ import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 ---
 
-<aside class="fixed z-[110] left-6 top-0 hidden h-full flex-col items-center sm:flex">
-    <span class="h-48 w-[1px] bg-gray"></span>
-    <a target="_blank" href="https://www.linkedin.com/in/simon-villalon"
-        alt="Linkedin linkedin-profile linkedin-simonvillalonit" title="Linkedin page">
-        <Icon class="mt-2 text-3xl" name="Linkedin" />
-    </a>
-    <a class="mt-2 text-3xl" target="_blank" href="https://github.com/SimonVillalonIT"
-        alt="Github github-profile github-simonvillalonit" title="Github page">
-        <Icon name="Github" />
-    </a>
-    <a class="mb-2 mt-2 text-3xl" target="_blank" href="https://twitter.com/simonvillalon4"
-        alt="Twitter twitter-profile twitter-simonvillalonit" title="Linkedin page">
-        <Icon name="Twitter" />
-    </a>
-    <span class="h-full w-[1px] bg-gray"></span>
+<aside
+  class="fixed left-6 top-0 z-50 hidden h-full flex-col items-center lg:flex"
+>
+  <span class="h-48 w-[1px] bg-gray"></span>
+  <a
+    target="_blank"
+    href="https://www.linkedin.com/in/simon-villalon"
+    alt="Linkedin linkedin-profile linkedin-simonvillalonit"
+  >
+    <Icon class="mt-2 text-3xl" name="Linkedin" title="Linkedin page" />
+  </a>
+  <a
+    class="mt-2 text-3xl"
+    target="_blank"
+    href="https://github.com/SimonVillalonIT"
+    alt="Github github-profile github-simonvillalonit"
+  >
+    <Icon name="Github" title="Github page" />
+  </a>
+  <a
+    class="mb-2 mt-2 text-3xl"
+    target="_blank"
+    href="https://twitter.com/simonvillalon4"
+    alt="Twitter twitter-profile twitter-simonvillalonit"
+  >
+    <Icon name="Twitter" title="Linkedin page" />
+  </a>
+  <span class="h-full w-[1px] bg-gray"></span>
 </aside>

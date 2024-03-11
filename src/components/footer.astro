@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../../public/logo-sv-white.png";
+import { Icon } from "astro-icon/components";
+---
+
+<footer
+  class="relative z-50 flex w-full flex-col items-center border-t border-gray bg-background px-2 pb-4 pt-8 text-white lg:px-48"
+>
+  <div class="flex w-full flex-col justify-between pb-6 lg:flex-row">
+    <div>
+      <div class="flex flex-col items-center text-2xl lg:flex-row lg:text-base">
+        <Image
+          loading="eager"
+          class="h-8 w-8 lg:h-5 lg:w-5"
+          src={Logo}
+          alt="logo simon-villalon"
+        />
+        <p>Simón</p>
+        <a
+          class="text-lg font-thin text-gray lg:ml-8 lg:text-base"
+          href="https://github.com/SimonVillalonIT"
+          target="_blank">github.com/SimonVillalonIT</a
+        >
+      </div>
+      <p class="mt-4 px-2 text-center lg:px-0 lg:text-start">
+        Diseñador Web y Desarrollador Full-Stack
+      </p>
+    </div>
+    <div class="mb-4 mt-4 lg:mb-0 lg:mt-0">
+      <h3 class="mb-2 text-center text-2xl font-medium lg:text-start">Media</h3>
+      <div class="flex justify-evenly gap-2 text-4xl lg:justify-between">
+        <Icon name="Github" />
+        <Icon name="Linkedin" />
+        <Icon name="Twitter" />
+      </div>
+    </div>
+  </div>
+  <p class="text-gray">Hecho con ❤️ por Simón Villalón</p>
+</footer>
